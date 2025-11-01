@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Playbook — 3º Preparatoria — Misión M05: Modelando el Esqueleto de Datos</title>
+  <title>Playbook: Sesión 5 - 3ro Preparatotia.</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M05: Modelando el Esqueleto de Datos</strong></h1>
+    <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 5 - 3ro Preparatotia.</strong></h1>
     <div class="header-widgets">
       <div class="timer-container">
-        <span id="timer" hidden>⏱️ 00:00</span>
-        <button id="startStop" hidden>Start</button>
-        <button id="reset" hidden>Reset</button>
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
       </div>
       <div class="theme-toggle">
         <i class="fas fa-sun"></i>
         <label class="switch">
-          <input type="checkbox" id="theme-toggle-input" hidden>
+          <input type="checkbox" id="theme-toggle-input">
           <span class="slider round"></span>
         </label>
         <i class="fas fa-moon"></i>
@@ -44,58 +44,68 @@
       </div>
     </aside>
     <main class="content">
-      <div class="progress-bar" hidden>
+      <div class="progress-bar">
         <div class="progress"></div>
       </div>
-      <button id="toggle-dialogues" hidden>Mostrar todos los diálogos</button>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
       <!-- 0) De un Vistazo -->
       <section class="activity-card" id="activity-0">
-        <h2 class="activity-title">📝 De un Vistazo: Misión M05: Modelando el Esqueleto de Datos</h2>
-        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables.</p>
-        <div class="overview">
-          <section class="overview-block">
-            <h3>Objetivos e “I Can”</h3>
-            <ul>
-              <li>Puedo dirigir a una IA para diseñar un esquema de base de datos y definir endpoints de API.</li>
-              <li>Puedo crear un documento de diseño de API estructurado en Markdown para la comunicación backend-frontend.</li>
-            </ul>
-          </section>
-          <section class="overview-block">
-            <h3>Secuencia y tiempos</h3>
-            <ol>
-              <li>Saludo Interactivo con IA — 3 min</li>
-              <li>“I Can” + Desafío — 5–7 min</li>
-              <li>AI GYM — 10–12 min</li>
-              <li>Brain Spark — 17–20 min</li>
-              <li>GNIUS STORM — 5 min</li>
-            </ol>
-          </section>
-          <section class="overview-block">
-            <h3>Entregable del Micro-Proyecto</h3>
-            <ul>
-              <li>Un documento de diseño de API en formato Markdown, definiendo 3-4 endpoints cruciales (método HTTP, ruta, estructura JSON de petición/respuesta).</li>
-            </ul>
-          </section>
-          <section class="overview-block">
-            <h3>Criterios de calidad</h3>
-            <ul>
-              <li>Claridad en la definición del esquema de datos.</li>
-              <li>Precisión en la especificación de los endpoints (método, ruta, JSON).</li>
-              <li>Trazabilidad del razonamiento en la interacción con la IA.</li>
-              <li>Coherencia del diseño de API con flujos de usuario (M03).</li>
-              <li>Capacidad de la IA para actuar como Ingeniero de Bases de Datos y Arquitecto de API.</li>
-            </ul>
-          </section>
-          <section class="overview-block">
-            <h3>Materiales y preparación</h3>
-            <ul>
-              <li>Proyector e internet</li>
-              <li>Acceso a un LLM (Xolo/ChatGPT/Gemini/Claude)</li>
-              <li>Editor de texto/código (VS Code, Google Docs, etc.)</li>
-              <li>Opcional: Postman o herramienta similar para simulación de API</li>
-              <li>Ejemplo mínimo de un diseño de API en Markdown</li>
-            </ul>
-          </section>
+        <h2 class="activity-title"><span class="book-icon">📝</span> De un Vistazo: Sesión 5 - 3ro Preparatotia.</h2>
+        <p class="overview-subtitle">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+        <div class="overview-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                        <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Objetivos de aprendizaje:</strong>
+                            <p>Al final de la sesión, los estudiantes podrán:</p>
+                            <ul>
+                                <li>Dirigir a una IA para que actúe como Ingeniero de Bases de Datos y diseñe un esquema de datos (tablas, campos).</li>
+                                <li>Instruir a una IA para que actúe como Arquitecto de API y defina los endpoints necesarios para la comunicación entre backend y frontend.</li>
+                                <li>Crear un documento de diseño de API estructurado que sirva como "plano técnico" para el desarrollo del backend.</li>
+                                <li><strong>Objetivo general de la sesión:</strong> Que los estudiantes aprendan a diseñar la arquitectura técnica del backend, utilizando la IA para modelar la base de datos y definir la API que dará vida a la experiencia de usuario.</li>
+                            </ul>
+                            <strong>Secuencia Didáctica:</strong>
+                            <ol>
+                              <li><strong>Actividad 1:</strong> Saludo Interactivo con IA — 3 min</li>
+                              <li><strong>Actividad 2:</strong> “I Can” + Desafío — 5–7 min</li>
+                              <li><strong>Actividad 3:</strong> AI GYM — 10–12 min</li>
+                              <li><strong>Actividad 4:</strong> Brain Spark — 17–20 min</li>
+                              <li><strong>Actividad 5:</strong> GNIUS STORM — 5 min</li>
+                            </ol>
+                            <strong>Entregable Clave:</strong>
+                            <ul>
+                              <li>Un documento de diseño de API estructurado que especifica el esquema de la base de datos y los endpoints clave.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <strong>Materiales y preparación:</strong>
+                            <ul>
+                              <li>Proyector e internet</li>
+                              <li>Acceso a un LLM (Xolo/ChatGPT/Gemini/Claude)</li>
+                              <li>Editor de texto/código (VS Code, Google Docs, etc.)</li>
+                              <li>Opcional: Postman o herramienta similar para simulación de API</li>
+                              <li>Ejemplo mínimo de un diseño de API en Markdown</li>
+                              <li>Presentación (10 diapositivas)</li>
+                            </ul>
+                            <strong>Criterios de calidad:</strong>
+                            <ul>
+                              <li>Claridad en la definición del esquema de datos.</li>
+                              <li>Precisión en la especificación de los endpoints (método, ruta, JSON).</li>
+                              <li>Trazabilidad del razonamiento en la interacción con la IA.</li>
+                              <li>Coherencia del diseño de API con la arquitectura general.</li>
+                              <li>Capacidad de la IA para actuar como <strong>Ingeniero de Bases de Datos</strong> y <strong>Arquitecto de API</strong>.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
       </section>
       <!-- 1) Saludo Interactivo con IA -->
@@ -106,24 +116,24 @@
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-              <p class="step-instructions">Proyectar Diapositiva 2. Conecta el tema con el valor profesional de diseñar el 'cerebro' de una aplicación.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 2) Conecta el tema con el valor profesional de diseñar el 'cerebro' de una aplicación.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Equipo: hoy nos adentramos en el 'cerebro' de las aplicaciones: el backend y el diseño de datos. Su rol como directores de proyecto es crucial aquí, ya que definirán cómo se estructura y comunica la información. Esto es fundamental para la estabilidad y escalabilidad de cualquier sistema de IA.</p>
+                <p class="dialogue assistant">Equipo: hoy nos adentramos en el 'cerebro' de las aplicaciones: el <strong>backend</strong> y el <strong>diseño de datos</strong>. Su rol como directores de proyecto es crucial aquí, ya que definirán cómo se estructura y comunica la información. Esto es fundamental para la estabilidad y escalabilidad de cualquier sistema.</p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-              <p class="step-instructions">Cada estudiante saluda a Xolo con perfil/intereses + misión M05 y foco en 'diseño de backend y API'.</p>
+              <p class="step-instructions">Cada estudiante saluda a Xolo con perfil/intereses + sesión de 'diseño de backend y API'.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas. Recuerden mencionar que el foco es el diseño de backend y API para la Misión M05.</p>
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas. Recuerden mencionar que el foco es el <strong>diseño de backend</strong> y <strong>API</strong>.</p>
               </div>
             </div>
           </article>
@@ -137,24 +147,24 @@
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 1 — Presenta el reto</h3>
-              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto de diseñar el esqueleto de datos y el contrato de API.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 3) Describe el reto de diseñar el esqueleto de datos y el contrato de API.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">El reto es actuar como Arquitectos de Backend. Deben diseñar el esqueleto de datos y el contrato de API que permitirá a nuestro frontend comunicarse con la lógica de negocio. Evaluaremos la claridad y la coherencia de su diseño.</p>
+                <p class="dialogue assistant">El reto es actuar como <strong>Arquitectos de Backend</strong>. Deben diseñar el <strong>esquema de datos</strong> y el <strong>contrato de API</strong> que permitirá a nuestro frontend comunicarse con la lógica de negocio. Evaluaremos la claridad y la coherencia de su diseño.</p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” alineado al entregable: un documento de diseño de API en Markdown.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 4) Cada estudiante redacta 1 “I Can” alineado al entregable: un documento de diseño de API.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo dirigir a una IA para diseñar un esquema de base de datos y definir endpoints de API para un sistema.”</p>
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo dirigir a una IA para diseñar un <strong>esquema de base de datos</strong> y definir <strong>endpoints de API</strong> para un sistema.”</p>
               </div>
             </div>
           </article>
@@ -168,36 +178,36 @@
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 1 — Marco del día</h3>
-              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco: Diseño de la estructura de datos y el contrato de la API. Explica el rol del LLM como Ingeniero de Bases de Datos y Arquitecto de API.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 5) Introduce el marco: Diseño de la estructura de datos y el contrato de la API. Explica el rol del LLM como Ingeniero de Bases de Datos y Arquitecto de API.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Hoy, el marco central es el diseño de la estructura de datos y el contrato de la API. Esto es crucial porque define cómo se almacenará y se accederá a la información. Eviten errores comunes como la falta de estandarización o la ambigüedad en las definiciones. Usen la claridad y la precisión como criterios para validar sus diseños.</p>
+                <p class="dialogue assistant">Hoy, el marco central es el <strong>diseño de la estructura de datos</strong> y el <strong>contrato de la API</strong>. Esto es crucial porque define cómo se almacenará y se accederá a la información. Eviten errores comunes como la falta de estandarización o la ambigüedad en las definiciones. Usen la claridad y la precisión como criterios para validar sus diseños.</p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 2 — Mini-demostración</h3>
-              <p class="step-instructions">Proyectar Diapositiva 6. Construye un ejemplo mínimo: un prompt para Xolo para diseñar una tabla SQL y otro para definir un endpoint REST.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 6) Modela en vivo cómo pedirle a Xolo que explique los conceptos de backend y su interconexión.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Observen cómo un prompt claro a Xolo puede generar un diseño de tabla SQL o un endpoint de API. Por ejemplo, 'Diseña una tabla SQL para 'productos' con id, nombre, precio, stock'. O 'Define un endpoint REST para obtener un producto por ID'. Verifiquen que la respuesta de la IA sea lógica y completa.</p>
+                <p class="dialogue assistant"><strong>“Xolo, explícame cómo se relacionan el backend y la base de datos en una aplicación. ¿Qué papel cumple el esquema de datos y cómo se conectan los endpoints del API con el frontend? Dame un ejemplo simple que muestre cómo fluyen los datos desde el usuario hasta la base de datos.”</strong></p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 3 — Check rápido</h3>
-              <p class="step-instructions">Proyectar Diapositiva 7. Preguntas de verificación: ¿Por qué es importante un contrato de API? ¿Qué elementos debe incluir un endpoint?</p>
+              <p class="step-instructions">(Proyectar Diapositiva 7) Preguntas de verificación: ¿Por qué es importante un contrato de API? ¿Qué elementos debe incluir un endpoint?</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Pregunta 1: ¿Por qué es fundamental tener un contrato de API claro antes de desarrollar el frontend y el backend? Pregunta 2: ¿Qué elementos clave debe especificar un endpoint de API para ser útil a un desarrollador frontend?</p>
+                <p class="dialogue assistant">Pregunta 1: ¿Por qué es fundamental tener un <strong>contrato de API</strong> claro antes de desarrollar el frontend y el backend? Pregunta 2: ¿Qué elementos clave debe especificar un <strong>endpoint de API</strong> para ser útil a un desarrollador frontend?</p>
               </div>
             </div>
           </article>
@@ -206,12 +216,12 @@
       <!-- 4) Brain Spark -->
       <section class="activity-card" id="activity-4">
         <h2 class="activity-title">Brain Spark</h2>
-        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto: un documento de diseño de API en Markdown.</p>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto: un documento de diseño de API.</p>
         <div class="steps">
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 1 — Producción</h3>
-              <p class="step-instructions">Proyectar Diapositiva 8. Indica el producto: un archivo Markdown con 3-4 endpoints. Checklist: método HTTP, ruta, estructura JSON de petición/respuesta. Trabajar con la IA para generar el contenido.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 8) Indica el producto: un documento con el esquema de datos y 3-4 endpoints. Checklist: método HTTP, ruta, estructura JSON de petición/respuesta. Trabajar con la IA para generar el contenido.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
@@ -223,24 +233,24 @@
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 2 — Iteración</h3>
-              <p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta: añadir validación de datos para un campo o un código de error específico para una respuesta.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 9) Pide una mejora concreta: añadir validación de datos para un campo o un código de error específico para una respuesta.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Antes de cerrar: valida que cada endpoint incluya al menos un ejemplo de código de estado HTTP (ej., 200 OK, 404 Not Found) y una breve descripción de su significado. Si no lo tiene, ajusta y vuelve a probar.</p>
+                <p class="dialogue assistant">Antes de cerrar: valida que cada <strong>endpoint</strong> incluya al menos un ejemplo de <strong>código de estado HTTP</strong> (ej., 200 OK, 404 Not Found) y una breve descripción de su significado. Si no lo tiene, ajusta y vuelve a probar.</p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 3 — Evidencia</h3>
-              <p class="step-instructions">Proyectar Diapositiva 10. Solicita la entrega del archivo Markdown del diseño de API.</p>
+              <p class="step-instructions">(Proyectar Diapositiva 10) Solicita la entrega del documento de diseño de API.</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Entrega con nombre: M05_DisenoAPI_[TuNombre].md. Incluye el archivo Markdown de tu diseño de API.</p>
+                <p class="dialogue assistant">Entrega con nombre: S05_APIDesign_[TuNombre]. Incluye el documento de tu <strong>diseño de API</strong>.</p>
               </div>
             </div>
           </article>
@@ -259,19 +269,19 @@
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Enfoca tu presentación en un endpoint clave de tu diseño: la decisión detrás de su estructura, el criterio que aplicaste y cómo la interacción con la IA te guio en su definición.</p>
+                <p class="dialogue assistant">Enfoca tu presentación en un <strong>endpoint</strong> clave de tu diseño: la decisión detrás de su estructura, el criterio que aplicaste y cómo la interacción con la IA te guio en su definición.</p>
               </div>
             </div>
           </article>
           <article class="step-card">
             <div class="step-content">
               <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje clave sobre el diseño de backend/API, 1 criterio que más impactó, 1 siguiente paso (ej., simular el API con Postman, empezar a codificar un controlador).</p>
+              <p class="step-instructions">(Proyectar Diapositiva 11) Síntesis: 1 aprendizaje clave sobre el diseño de backend/API, 1 criterio que más impactó, 1 siguiente paso (ej., simular el API con Postman, empezar a codificar un controlador).</p>
             </div>
             <div class="collapsible">
               <button type="button" class="collapsible-button">Diálogo Sugerido</button>
               <div class="collapsible-content">
-                <p class="dialogue assistant">Síntesis: Hoy aprendimos que el diseño de backend y API es la columna vertebral de cualquier aplicación. El criterio que más impactó fue la precisión en la definición del contrato JSON. Como siguiente paso, les recomiendo simular uno de sus endpoints usando una herramienta como Postman para ver cómo se comporta en la práctica.</p>
+                <p class="dialogue assistant">Síntesis: Hoy aprendimos que el <strong>diseño de backend y API</strong> es la columna vertebral de cualquier aplicación. El criterio que más impactó fue la precisión en la definición del <strong>contrato JSON</strong>. Como siguiente paso, les recomiendo simular uno de sus <strong>endpoints</strong> usando una herramienta como <strong>Postman</strong> para ver cómo se comporta en la práctica.</p>
               </div>
             </div>
           </article>
