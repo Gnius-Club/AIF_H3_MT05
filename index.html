@@ -1,294 +1,443 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Playbook: Sesión 5 - 3ro Preparatotia.</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P3-TM5</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 5 - 3ro Preparatotia.</strong></h1>
-    <div class="header-widgets">
-      <div class="timer-container">
-        <span id="timer">⏱️ 00:00</span>
-        <button id="startStop">Start</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle-input">
-          <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-      </div>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 5 - 3o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> modelar endpoints y definir estructuras JSON en Markdown para documentar la comunicación técnica y comprender cómo se establecen los contratos de comunicación y la trazabilidad entre la experiencia de usuario y los datos.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame cómo se relacionan el backend y la base de datos en una aplicación. ¿Qué papel cumple el esquema de datos y cómo se conectan los endpoints del API con el frontend? Dame un ejemplo simple que muestre cómo fluyen los datos desde el usuario hasta la base de datos.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Contratos de Comunicación: Es el acuerdo que define exactamente cómo se hablan dos partes de un sistema (como una app y su base de datos) para que siempre se entiendan sin errores.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar herramientas de documentación para definir cómo fluye la información entre el usuario y el servidor.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes estructuras de datos y tipos de endpoints para entender limitaciones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadoras con acceso a internet (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a WebWave (https://webwave.me/), JDoodle (https://www.jdoodle.com/), GitHub (https://github.com/) y plataformas de IA</label>
+                        <label><input type="checkbox"> Cuentas de GitHub configuradas y listas para usar</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa lógica de backend y documentación técnica</label>
+                        <label><input type="checkbox"> 📋 Nota: Asegúrate de que los estudiantes tengan sus user flows previos a la mano para coherencia.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> No aplica hardware físico, mantén tus cuentas de software seguras y tus pestañas organizadas.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la relación entre backend, bases de datos y APIs (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si hay errores en el formato JSON:</strong> Pide a XOLO que revise la sintaxis de tus llaves y comas.</li>
+                            <li><strong>Si no sabes qué método usar (GET/POST):</strong> Pregunta a XOLO cuál es la diferencia según la acción que quieras realizar.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos un cerebro y un lenguaje a sus aplicaciones.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Arquitectura de Backend y APIs.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A diseñar el cerebro de tu app para que la información fluya sin errores.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros de software en empresas como Netflix o Spotify usan esta tecnología para conectar lo que ves en pantalla con los millones de datos en sus servidores.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo se conectan los endpoints del API con el frontend y la base de datos.</li>
+                            <li>Introduce el concepto de contratos de comunicación y esquemas de datos.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar la lógica de backend para entender el flujo de datos.</li>
+                            <li>Aprender sobre trazabilidad entre UX y datos.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar lógica de backend para conectar el frontend con los datos y entender los contratos de comunicación.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a entrar en el corazón de nuestras aplicaciones. Abran su chat con XOLO y denle un saludo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo el backend se comunica con las bases de datos. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará cómo fluye la información desde que un usuario hace clic hasta que llega al servidor. Aprovechen para preguntarle todo lo que no entiendan sobre APIs y bases de datos.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los computadoras conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el diseño de endpoints y documentación.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para definir la arquitectura de su API.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Documentar su diseño en Markdown y probar la lógica en JDoodle.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a crear mi documento de diseño de API (Markdown) con Vibe Coding: selecciona 3–4 endpoints críticos alineados a mi user flow, define método/ruta y estructura JSON de request/response. Ejecuta: entrega el archivo en formato Markdown listo para pegar en mi repo y una mini tabla “endpoint → qué pantalla lo usa” para conectar UX con backend."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El flujo de datos entre el frontend y el backend funciona como esperabas?</li>
+                            <li>¿Qué pasa si un usuario envía datos en un formato JSON incorrecto?</li>
+                            <li>¿Funciona igual un endpoint de tipo GET vs uno de tipo POST?</li>
+                            <li>¿Cómo asegura tu diseño que el contrato de comunicación se cumpla entre las partes?</li>
+                            <li>¿De qué manera conectaste cada pantalla de tu UX con un dato específico del backend?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear el plano técnico de su proyecto! Vamos a usar a XOLO para idear los endpoints de nuestra API y definir el 'VIBE' de cómo se comunicará nuestra app. Sigan el flujo: primero ideen con XOLO, luego definan el contrato técnico (GCS), documéntenlo en Markdown y súbanlo a su repositorio. Por ejemplo, podrían diseñar el sistema de login o el feed de una red social. No olviden revisar las preguntas de experimentación para ver si su diseño es sólido. Si tienen errores en la estructura JSON o dudas en la lógica, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con los endpoints básicos. ¿Puedes enseñarme cómo hacer que mi API incluya validaciones de seguridad avanzadas o manejo de errores complejos?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué endpoints y estructuras JSON funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué rutas de tu API conectan mejor tu frontend con la base de datos? ¿Qué te sorprendió del flujo?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi API conecta las pantallas de usuario con endpoints específicos. Me sorprendió que la estructura JSON debe ser tan precisa."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </header>
-  <div class="main-container">
-    <aside class="activity-list">
-      <h2>Actividades</h2>
-      <ul>
-        <li><a href="#activity-0">📝</a></li>
-        <li><a href="#activity-1">1</a></li>
-        <li><a href="#activity-2">2</a></li>
-        <li><a href="#activity-3">3</a></li>
-        <li><a href="#activity-4">4</a></li>
-        <li><a href="#activity-5">5</a></li>
-      </ul>
-      <div class="sidebar-info">
-        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-      </div>
-    </aside>
-    <main class="content">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-      <!-- 0) De un Vistazo -->
-      <section class="activity-card" id="activity-0">
-        <h2 class="activity-title"><span class="book-icon">📝</span> De un Vistazo: Sesión 5 - 3ro Preparatotia.</h2>
-        <p class="overview-subtitle">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-        <div class="overview-table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                        <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong>Objetivos de aprendizaje:</strong>
-                            <p>Al final de la sesión, los estudiantes podrán:</p>
-                            <ul>
-                                <li>Dirigir a una IA para que actúe como Ingeniero de Bases de Datos y diseñe un esquema de datos (tablas, campos).</li>
-                                <li>Instruir a una IA para que actúe como Arquitecto de API y defina los endpoints necesarios para la comunicación entre backend y frontend.</li>
-                                <li>Crear un documento de diseño de API estructurado que sirva como "plano técnico" para el desarrollo del backend.</li>
-                                <li><strong>Objetivo general de la sesión:</strong> Que los estudiantes aprendan a diseñar la arquitectura técnica del backend, utilizando la IA para modelar la base de datos y definir la API que dará vida a la experiencia de usuario.</li>
-                            </ul>
-                            <strong>Secuencia Didáctica:</strong>
-                            <ol>
-                              <li><strong>Actividad 1:</strong> Saludo Interactivo con IA — 3 min</li>
-                              <li><strong>Actividad 2:</strong> “I Can” + Desafío — 5–7 min</li>
-                              <li><strong>Actividad 3:</strong> AI GYM — 10–12 min</li>
-                              <li><strong>Actividad 4:</strong> Brain Spark — 17–20 min</li>
-                              <li><strong>Actividad 5:</strong> GNIUS STORM — 5 min</li>
-                            </ol>
-                            <strong>Entregable Clave:</strong>
-                            <ul>
-                              <li>Un documento de diseño de API estructurado que especifica el esquema de la base de datos y los endpoints clave.</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <strong>Materiales y preparación:</strong>
-                            <ul>
-                              <li>Proyector e internet</li>
-                              <li>Acceso a un LLM (Xolo/ChatGPT/Gemini/Claude)</li>
-                              <li>Editor de texto/código (VS Code, Google Docs, etc.)</li>
-                              <li>Opcional: Postman o herramienta similar para simulación de API</li>
-                              <li>Ejemplo mínimo de un diseño de API en Markdown</li>
-                              <li>Presentación (10 diapositivas)</li>
-                            </ul>
-                            <strong>Criterios de calidad:</strong>
-                            <ul>
-                              <li>Claridad en la definición del esquema de datos.</li>
-                              <li>Precisión en la especificación de los endpoints (método, ruta, JSON).</li>
-                              <li>Trazabilidad del razonamiento en la interacción con la IA.</li>
-                              <li>Coherencia del diseño de API con la arquitectura general.</li>
-                              <li>Capacidad de la IA para actuar como <strong>Ingeniero de Bases de Datos</strong> y <strong>Arquitecto de API</strong>.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-      </section>
-      <!-- 1) Saludo Interactivo con IA -->
-      <section class="activity-card" id="activity-1">
-        <h2 class="activity-title">Saludo Interactivo con IA</h2>
-        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 2) Conecta el tema con el valor profesional de diseñar el 'cerebro' de una aplicación.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Equipo: hoy nos adentramos en el 'cerebro' de las aplicaciones: el <strong>backend</strong> y el <strong>diseño de datos</strong>. Su rol como directores de proyecto es crucial aquí, ya que definirán cómo se estructura y comunica la información. Esto es fundamental para la estabilidad y escalabilidad de cualquier sistema.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-              <p class="step-instructions">Cada estudiante saluda a Xolo con perfil/intereses + sesión de 'diseño de backend y API'.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas. Recuerden mencionar que el foco es el <strong>diseño de backend</strong> y <strong>API</strong>.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 2) “I Can” + Desafío -->
-      <section class="activity-card" id="activity-2">
-        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
-        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 3) Describe el reto de diseñar el esqueleto de datos y el contrato de API.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">El reto es actuar como <strong>Arquitectos de Backend</strong>. Deben diseñar el <strong>esquema de datos</strong> y el <strong>contrato de API</strong> que permitirá a nuestro frontend comunicarse con la lógica de negocio. Evaluaremos la claridad y la coherencia de su diseño.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 4) Cada estudiante redacta 1 “I Can” alineado al entregable: un documento de diseño de API.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo dirigir a una IA para diseñar un <strong>esquema de base de datos</strong> y definir <strong>endpoints de API</strong> para un sistema.”</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 3) AI GYM -->
-      <section class="activity-card" id="activity-3">
-        <h2 class="activity-title">AI GYM</h2>
-        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión: Diseño de la estructura de datos y el contrato de la API.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Marco del día</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 5) Introduce el marco: Diseño de la estructura de datos y el contrato de la API. Explica el rol del LLM como Ingeniero de Bases de Datos y Arquitecto de API.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Hoy, el marco central es el <strong>diseño de la estructura de datos</strong> y el <strong>contrato de la API</strong>. Esto es crucial porque define cómo se almacenará y se accederá a la información. Eviten errores comunes como la falta de estandarización o la ambigüedad en las definiciones. Usen la claridad y la precisión como criterios para validar sus diseños.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 6) Modela en vivo cómo pedirle a Xolo que explique los conceptos de backend y su interconexión.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant"><strong>“Xolo, explícame cómo se relacionan el backend y la base de datos en una aplicación. ¿Qué papel cumple el esquema de datos y cómo se conectan los endpoints del API con el frontend? Dame un ejemplo simple que muestre cómo fluyen los datos desde el usuario hasta la base de datos.”</strong></p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Check rápido</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 7) Preguntas de verificación: ¿Por qué es importante un contrato de API? ¿Qué elementos debe incluir un endpoint?</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Pregunta 1: ¿Por qué es fundamental tener un <strong>contrato de API</strong> claro antes de desarrollar el frontend y el backend? Pregunta 2: ¿Qué elementos clave debe especificar un <strong>endpoint de API</strong> para ser útil a un desarrollador frontend?</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 4) Brain Spark -->
-      <section class="activity-card" id="activity-4">
-        <h2 class="activity-title">Brain Spark</h2>
-        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto: un documento de diseño de API.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Producción</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 8) Indica el producto: un documento con el esquema de datos y 3-4 endpoints. Checklist: método HTTP, ruta, estructura JSON de petición/respuesta. Trabajar con la IA para generar el contenido.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">N/A</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Iteración</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 9) Pide una mejora concreta: añadir validación de datos para un campo o un código de error específico para una respuesta.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Antes de cerrar: valida que cada <strong>endpoint</strong> incluya al menos un ejemplo de <strong>código de estado HTTP</strong> (ej., 200 OK, 404 Not Found) y una breve descripción de su significado. Si no lo tiene, ajusta y vuelve a probar.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Evidencia</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 10) Solicita la entrega del documento de diseño de API.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Entrega con nombre: S05_APIDesign_[TuNombre]. Incluye el documento de tu <strong>diseño de API</strong>.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 5) GNIUS STORM -->
-      <section class="activity-card" id="activity-5">
-        <h2 class="activity-title">GNIUS STORM</h2>
-        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-              <p class="step-instructions">2-3 personas/equipos muestran su documento de diseño de API, enfocándose en un endpoint clave, la decisión de diseño y cómo la IA les ayudó.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Enfoca tu presentación en un <strong>endpoint</strong> clave de tu diseño: la decisión detrás de su estructura, el criterio que aplicaste y cómo la interacción con la IA te guio en su definición.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 11) Síntesis: 1 aprendizaje clave sobre el diseño de backend/API, 1 criterio que más impactó, 1 siguiente paso (ej., simular el API con Postman, empezar a codificar un controlador).</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Síntesis: Hoy aprendimos que el <strong>diseño de backend y API</strong> es la columna vertebral de cualquier aplicación. El criterio que más impactó fue la precisión en la definición del <strong>contrato JSON</strong>. Como siguiente paso, les recomiendo simular uno de sus <strong>endpoints</strong> usando una herramienta como <strong>Postman</strong> para ver cómo se comporta en la práctica.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html></html>
